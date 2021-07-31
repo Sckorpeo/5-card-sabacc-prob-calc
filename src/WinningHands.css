@@ -1,0 +1,39 @@
+.WinningHands-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    background: linear-gradient(to left top,rgba(255,255,255,0.3), rgba(255,255,255,0.7));
+    border-radius: 20px;
+    margin-top: 1em;
+    transition: linear 250ms;
+}
+.WinningHands-rank{
+    width: 20%;
+    border: 1px solid grey;
+    height: 100%;
+    padding-top:auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.WinningHands-content{
+    width: 60%;
+    height: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.WinningHands-freq{
+    width: 20%;
+}
+.WinningHands-container:hover{
+background:linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.2)); 
+color: yellow;
+cursor: pointer;
+}
