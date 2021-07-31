@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   height: 100vh;
-  background: url('./sabacc_full_background.jpeg');
+  background: black;
+  /* url('./sabacc_full_background.jpeg'); */
   background-repeat: no-repeat;
   background-size: cover;
 }

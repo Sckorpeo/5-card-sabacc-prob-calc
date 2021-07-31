@@ -7,6 +7,7 @@ import ProbList from './ProbList';
 import Prob from './Prob';
 import WinningHands from './WinningHands';
 import '@fortawesome/fontawesome-free/css/all.css';
+import backgroundImg from './sabacc_full_background.jpeg';
 
 class App extends Component {
   static defaultProps = {
@@ -141,7 +142,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{ backgroundImage: `url(${backgroundImg})` }}>
         <h1>5 Card Sabacc Probability Calculator</h1>
         <InputForm run={this.run} loading={this.loading} />
         {this.state.loading ?
