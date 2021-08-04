@@ -65,7 +65,7 @@ class Home extends Component {
                             </p>
                             <div className='Home-img-wrapper'>
                                 <div className='Home-img-container'>
-                                    <img src={`${process.env.PUBLIC_URL}/Images/DSC04275.jpg`}
+                                    <img src={`${process.env.PUBLIC_URL}/Images/DSC04275.JPG`}
                                         alt='Sabacc deck.'
                                         className='Home-img-sabacc_deck'></img>
                                 </div>
@@ -141,7 +141,7 @@ class Home extends Component {
                             </ul>
                             <div className='Home-img-wrapper rules-img'>
                                 <div className='Home-img-container'>
-                                    <img src={`${process.env.PUBLIC_URL}/Images/DSC04276.jpg`}
+                                    <img src={`${process.env.PUBLIC_URL}/Images/DSC04276.JPG`}
                                         alt='Sabacc cards.'
                                         className='Home-img-sabacc_cards' />
                                 </div>
