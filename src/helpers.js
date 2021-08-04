@@ -14,6 +14,20 @@ let createDeck = () => {
     return deck;
 }
 
+let getColor = (perc) => {
+    if (perc > .4) {
+        return '#a1ff0a'
+    } else if (perc > .3) {
+        return '#deff0a'
+    } else if (perc > .1) {
+        return '#ffd300'
+    } else if (perc > .05) {
+        return '#ff8700'
+    } else if (perc > 0) {
+        return '#ff0000'
+    }
+}
+
 let randomNumber = (n) => {
     let num = Math.floor(Math.random() * n)
     return num;
@@ -145,11 +159,31 @@ let handCheck = (array) => {
     }
 }
 
+let getCardImg = (num) => {
+    if (num > 0 && num !== 10) {
+        return `sabacc_pos_sqr_0${num}.png`
+    }
+    if (num === 10) {
+        return `sabacc_pos_sqr_10.png`
+    }
+    if (num === 0) {
+        return 'sabacc_sylop_01.png'
+    }
+    if (num < 0 && num !== -10) {
+        return `sabacc_neg_tri_0${Math.abs(num)}.png`
+    }
+    if (num === -10) {
+        return `sabacc_neg_tri_10.png`
+    }
+}
+
 export {
     createDeck,
     randomNumber,
     total,
     shuffle,
     compareArrays,
-    handCheck
+    handCheck,
+    getCardImg,
+    getColor
 };

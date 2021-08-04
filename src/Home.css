@@ -1,0 +1,141 @@
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    color: white;
+}
+h2{
+    font-size: 1.5em;
+    margin-bottom: 5%;
+}
+h1{
+    font-size: 3em;
+}
+.Home-goal h1{
+    padding: 5% 0 0 5%;
+}
+
+.Home-intro{
+    background:yellow;
+    color: black;
+}
+.Home-intro-header{
+    padding: 0 5%;
+    padding-top: 220px;
+    width: 50%;
+    height: 50%;
+    margin-left: 20%;
+}
+.Home-intro-content{
+    height: 50%;
+    padding: 0 5%;
+    width: 50%;
+    font-weight: 500;
+    margin-left: 20%;
+}
+.Home-goal{
+    background: #0A0A0A;
+}
+.Home-goal span{
+    color: yellow;
+    font-weight: 700;
+}
+.Home-rules{
+    background: #707070;
+    color: white;
+}
+.Home-container{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+.Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
+    width:35%;
+    height: 100%;
+    padding: 0 0 7% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Home-img-wrapper{
+    height: 40%;
+    width: 100%;
+}
+.Home-img-container{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+.Home-img-disney_world{
+    margin-top: -35%;
+    width: 100%;
+    
+}
+.Home-img-sabacc_deck{
+    width: 100%;
+    margin-top: -7%;
+}
+.Home-goal-content-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+.Home-img-subtext{
+color:#ACACAC;
+font-weight: 300;
+text-align: center;
+font-style: italic;
+}
+
+
+.Home-rules-content-wrapper span{
+    color: black;
+}
+.Home-rules-h1-span{
+    color: yellow;
+}
+.Home-rules-content-wrapper{
+    display: flex;
+    height: 95%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.Home-rules-section-one, .Home-rules-section-two, .Home-rules-section-three{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 5% 0 2.5% 0;
+    
+}
+.Home-rules-section-one{
+justify-content: top;
+}
+.Home-rules-section-three{
+    justify-content: flex-end;
+}
+.Home-rule-next span{
+    color: yellow;
+}
+.Home-img-sabacc_cards{
+    width: 100%;
+    margin-top: -4%;
+}
+.Home-rules ul, ol{
+    padding: 5% 0 2.5% 10%;
+}
+.Home-rules h1{
+    height: 5%;
+    text-align: center;
+    padding: 2% 0 0 0;
+}
+.Home-rules h2{
+    margin-bottom: 2.5%;
+}
+.rules-img{
+    padding: 3% 0 0% 0;
+}

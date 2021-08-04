@@ -1,0 +1,14 @@
+.ProbCalc {
+  text-align: center;
+  height: 100vh;
+  background: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.ProbCalc h1{
+  margin: 0;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  color: yellow;
+}

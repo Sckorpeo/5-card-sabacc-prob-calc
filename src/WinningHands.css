@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 15%;
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid grey;
@@ -19,6 +19,8 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    border-radius: 10px;
+    /* box-shadow: inset 0 0 15px 0px green; */
     
 }
 .WinningHands-content{
@@ -26,14 +28,40 @@
     height: 100%;
     letter-spacing: 1px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.WinningHands-content img{
+    width:3em;
+    display: inline;
+    height: auto;
+}
+.WinningHands-freq-wrapper{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
-.WinningHands-freq{
-    width: 20%;
+.WinningHands-freq-btn{
+    height: 30%;
+    width: 5em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset 0px 0 0 0 #31302B;
+    background: yellow;
+    transition: ease-out .6s ;
+}
+.WinningHands-freq-btn:hover{
+box-shadow: inset -100px 0px 0px 0px white;
+    
+
 }
 .WinningHands-container:hover{
 background:linear-gradient(to top,rgba(0,0,0,0.8), rgba(0,0,0,0.2)); 
 color: yellow;
-cursor: pointer;
+
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
+    height: 15%;
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid grey;
@@ -14,12 +14,45 @@
     width: 20%;
     border: 1px solid grey;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
     
+}
+.prob-content img{
+    width:3em;
+    display: inline;
+    height: auto;
 }
 .prob-content{
     width: 60%;
+    height: 100%;
     letter-spacing: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
-.prob-freq{
+.prob-freq-wrapper{
     width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prob-freq-btn{
+    height: 30%;
+    width: 5em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset 0px 0 0 0 #31302B;
+    background: yellow;
+    transition: ease-out .6s ;
+}
+.prob-freq-btn:hover{
+box-shadow: inset -100px 0px 0px 0px white;
+    
+
 }

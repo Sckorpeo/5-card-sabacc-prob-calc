@@ -7,9 +7,11 @@
     margin: auto;
     overflow: scroll;
     margin-top:20px;
-    background: linear-gradient(to left top,rgba(255,255,255,0.3), rgba(255,255,255,0.7));
+    background: linear-gradient(to left top,rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.7));
     border-radius: 10px;
     padding: 10px;
+    /* backdrop-filter: blur(1rem); */
 }
 
 .prob-list-container::-webkit-scrollbar{
@@ -17,7 +19,8 @@
     
 }
 .prob-list-container::-webkit-scrollbar-thumb{
-    background:linear-gradient(to left top,rgba(255,255,255,0.3), rgba(255,255,255,0.7)); ;
+    background:linear-gradient(to left top,rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.7)); ;
 border-radius: 10px;
 
 }
