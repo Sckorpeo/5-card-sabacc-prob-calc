@@ -10,15 +10,6 @@ class Navbar extends Component {
         return (
             <div>
 
-
-                <nav className='Navbar-top'>
-                    <a className='Navbar-btn'
-                        href='/Probability-calculator'>
-                        <div className='Navbar-btn-div'>Probability Calculator</div>
-                    </a>
-                </nav>
-
-
                 <nav className='Navbar-bottom'>
 
                     <Link to='/#intro'
