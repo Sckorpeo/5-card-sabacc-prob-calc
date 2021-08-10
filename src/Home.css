@@ -410,4 +410,7 @@ li>div>p{
     .Home-hands-winningHands-container{
         width: 90%;
     }
+    .calc-btn{
+        position: static;
+    }
 }
