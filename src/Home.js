@@ -232,9 +232,10 @@ class Home extends Component {
 
                 </section>
                 <section className='Home-hands' id='winningHands'>
+                    <h2 className='Home-hands-notes-header'>Winning Hands</h2>
                     <div className='Home-hands-container'>
                         <div className='Home-hands-notes-container'>
-                            <h2 className='Home-hands-notes-header'>Winning Hands</h2>
+
 
                             <div className='Home-hands-notes-content'>
                                 <h3>Preface</h3>
