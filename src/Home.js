@@ -232,12 +232,13 @@ class Home extends Component {
 
                 </section>
                 <section className='Home-hands' id='winningHands'>
-                    <h2 className='Home-hands-notes-header'>Winning Hands</h2>
+
                     <div className='Home-hands-container'>
                         <div className='Home-hands-notes-container'>
 
 
                             <div className='Home-hands-notes-content'>
+                                <h2 className='Home-hands-notes-header'>Winning Hands</h2>
                                 <h3>Preface</h3>
                                 <p>
                                     As a preface to the winning hands list; in the orginial Corellian Spike version
