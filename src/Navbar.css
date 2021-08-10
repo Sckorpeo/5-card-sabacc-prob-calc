@@ -38,3 +38,9 @@ a{
 .rules{
     color: #707070;
 }
+
+@media (max-width: 60em) {
+    .Navbar-bottom{
+        display: none;
+    }
+}

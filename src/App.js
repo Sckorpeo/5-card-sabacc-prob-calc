@@ -30,7 +30,7 @@ class App extends Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path='/' render={() => <Home />} />
+                    <Route exact path='/' render={() => <Home switch={this.switch} />} />
                     <Route exact path='/Probability-calculator'
                         render={() => <ProbCalc switch={this.switch} />} />
                 </Switch>

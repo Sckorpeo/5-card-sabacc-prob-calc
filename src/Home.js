@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import './Home.css'
+import './Home.css';
+import { Link } from 'react-router-dom';
+
 
 class Home extends Component {
+    componentDidMount() {
+        if (this.props.switch()) {
+            this.props.switch()
+        }
+
+    }
 
 
     render() {
@@ -223,7 +231,233 @@ class Home extends Component {
 
 
                 </section>
+                <section className='Home-hands' id='winningHands'>
+                    <div className='Home-hands-container'>
+                        <div className='Home-hands-notes-container'>
+                            <h2 className='Home-hands-notes-header'>Winning Hands</h2>
 
+                            <div className='Home-hands-notes-content'>
+                                <h3>Preface</h3>
+                                <p>
+                                    As a preface to the winning hands list; in the orginial Corellian Spike version
+                                    of the game players can end the game with 2 to 5 cards in their hand. I updated
+                                    the rules to force players to have 5 cards at the end of the game for two reasons:
+                                </p>
+                                <ol>
+                                    <li>Having players with mismatching hands feels a bit sloppy. In most cases it felt
+                                        like players would hold onto as little cards as possible because drawing a card
+                                        could drastically change your hand.
+                                    </li>
+                                    <li>
+                                        Trying to calculate the probability of hands with variations from 2 to 5 cards while
+                                        including player choice into the decision is difficult. As I thought and found out by reading
+                                        Davie Murray's <a href='http://www.daviemurray.com/Sabacc/Sabacc_hand_hierarchy.html'>Hand Hierachy </a>
+                                        explanation, the original games hand hierachy does not exactly correlate to hand probability/likelihood.
+                                    </li>
+                                </ol>
+                                <p>
+                                    Because of the change in hand size, I had to adapt the winning hands list and figure out
+                                    the probabilities of the new possibilites. I created a <Link to='/Probability-calculator'>probability calculator</Link> to help decide
+                                    the order of winning hands you see on this page. If you would like to test out the calculator, there
+                                    is a button <span>below</span>.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div className='Home-hands-winningHands-container'>
+                            <div className='Home-hands-winningHands-rank-wrapper winning-hand'>
+                                <ol>
+                                    <li>
+                                        <div>
+                                            <h3>1. Rhylet</h3>
+                                            <p>Sabacc with three of a kind and a pair.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Negative triangle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_cir_02.png`}
+                                                alt='Negative circle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_sqr_02.png`}
+                                                alt='Negative square 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_03.png`}
+                                                alt='Positive square 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_cir_03.png`}
+                                                alt='Positive circle 3 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>2. Fleet/Squadron</h3>
+                                            <p>Sabacc with one sylop and four of a kind.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_sylop_01.png`}
+                                                alt='Sylop or 0 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_10.png`}
+                                                alt='Negative triangle 10 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_cir_10.png`}
+                                                alt='Positive circle 10 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_cir_10.png`}
+                                                alt='Negative circle 10 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_10.png`}
+                                                alt='Positive square 10 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>3. Gee Whiz</h3>
+                                            <p>Sabacc with 1,2,3,4,-10 or vice versa.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_01.png`}
+                                                alt='Negative triangle 1 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Negative triangle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_03.png`}
+                                                alt='Negative triangle 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_04.png`}
+                                                alt='Negative triangle 4 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_cir_10.png`}
+                                                alt='Positive circle 10 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>4. Pure Sabacc</h3>
+                                            <p>Sabacc with two sylops.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_sylop_01.png`}
+                                                alt='Sylop or 0 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_sylop_01.png`}
+                                                alt='Sylop or 0 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Negative triangle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_sqr_02.png`}
+                                                alt='Negative square 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_cir_04.png`}
+                                                alt='Positive circle 4 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>5. Straight Khyron</h3>
+                                            <p>Sabacc with one sylop and a run of numbers.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_sylop_01.png`}
+                                                alt='Sylop or 0 card..'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_07.png`}
+                                                alt='Negative triangle 7 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_08.png`}
+                                                alt='Positive square 8 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_09.png`}
+                                                alt='Positive square 9 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_10.png`}
+                                                alt='Negative triangle 10 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>6. Banthas Wild</h3>
+                                            <p>Sabacc with a three of a kind.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Negative triangle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_cir_02.png`}
+                                                alt='Negative circle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_sqr_02.png`}
+                                                alt='Negative square 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_01.png`}
+                                                alt='Positive square 1 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_cir_04.png`}
+                                                alt='Positive circle 4 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>7. Rule of Two</h3>
+                                            <p>Sabacc with two pairs.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_sylop_01.png`}
+                                                alt='Sylop or 0 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_03.png`}
+                                                alt='Negative triangle 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_03.png`}
+                                                alt='Positive square 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_02.png`}
+                                                alt='Positive square 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_cir_02.png`}
+                                                alt='Negative circle 2 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>8. Twins</h3>
+                                            <p>Sabacc with one pair.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_03.png`}
+                                                alt='Negative triangle 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_03.png`}
+                                                alt='Positive square 3 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_04.png`}
+                                                alt='Positive square 4 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_06.png`}
+                                                alt='Positive square 6 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_10.png`}
+                                                alt='Negative triangle 10 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>9. Sabacc</h3>
+                                            <p>Sum of hand equals zero.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_05.png`}
+                                                alt='Positive square 5 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_07.png`}
+                                                alt='Positive square 7 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_01.png`}
+                                                alt='Negative triangle 1 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Negative triangle 2 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_10.png`}
+                                                alt='Negative triangle 10 card.'></img>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h3>10. Nulrhek</h3>
+                                            <p>Sum of hand does not equal zero.</p>
+                                        </div>
+                                        <div className='Hand-img-container'>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_04.png`}
+                                                alt='Positive square 4 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_02.png`}
+                                                alt='Positive square 7 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_05.png`}
+                                                alt='Positive square 5 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_pos_sqr_06.png`}
+                                                alt='Positive square 6 card.'></img>
+                                            <img src={`${process.env.PUBLIC_URL}/Images/sabacc_neg_tri_10.png`}
+                                                alt='Negative triangle 10 card.'></img>
+                                        </div>
+                                    </li>
+
+                                </ol>
+
+                            </div>
+                            {/* <a className='calc-btn-container'> */}
+                            <div className='calc-btn'>Probability Calculator</div>
+                            {/* </a> */}
+                        </div>
+
+                    </div>
+                </section>
             </div>
         );
     }

@@ -177,6 +177,19 @@ let getCardImg = (num) => {
     }
 }
 
+let winningHands = [{
+    hand: 'Nulrhek', description: 'Sum of hand does not equal zero', exampleHand: [4, -2, 5, 6, -9]
+},
+{ hand: 'Pure Sabacc', description: 'Sabacc with two sylops.', exampleHand: [0, 0, 2, 2, -4] },
+{ hand: 'Banthas Wild', description: 'Sabacc with a three of a kind.', exampleHand: [4, 4, 4, -3, -9] },
+{ hand: 'Rule of Two', description: 'Sabacc with two pairs.', exampleHand: [3, 3, -2, 2, -6] },
+{ hand: 'Twins', description: 'Sabacc with one pair.', exampleHand: [-3, 3, 4, 6, -10] },
+{ hand: 'Rhylet', description: 'Sabacc with three of a kind and a pair.', exampleHand: [2, 2, 2, -3, -3] },
+{ hand: 'Fleet/Squadron', description: 'Sabacc with one sylop and four of a kind.', exampleHand: [0, 5, -5, 5, -5] },
+{ hand: 'Gee Whiz', description: 'Sabacc with 1,2,3,4,-10 or vice versa.', exampleHand: [1, 2, 3, 4, -10] },
+{ hand: 'Straight Khyron', description: 'Sabacc with one sylop and a run of numbers', exampleHand: [0, 2, -3, -4, 5] },
+{ hand: 'Sabacc', description: 'Sum of hand equals zero.', exampleHand: [5, 7, -9, -1, -2] }]
+
 export {
     createDeck,
     randomNumber,
@@ -185,5 +198,6 @@ export {
     compareArrays,
     handCheck,
     getCardImg,
-    getColor
+    getColor,
+    winningHands
 };

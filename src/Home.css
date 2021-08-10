@@ -2,6 +2,7 @@ section {
     height: 100vh;
     scroll-snap-align: start;
     color: white;
+    
 }
 h2{
     font-size: 1.5em;
@@ -66,6 +67,15 @@ h1{
     line-height: 1.5em;
 }
 
+@media (max-width:60em){
+h1{
+    font-size: 1.5em;
+}
+.Home-intro-header{
+    width: 90%;
+}
+}
+
 /* Goal ---------------------------------------------------------*/
 .Home-goal{
     background: #0A0A0A;
@@ -74,7 +84,7 @@ h1{
     height: 100vh;
 }
 .Home-goal h2{
-    height: 20%;
+    height: 10%;
     margin: 0;
     font-size:3em;
     text-align: center;
@@ -88,6 +98,7 @@ h1{
     height: 80%;
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 1em;
 }
 .Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
     /* width:100%;
@@ -129,11 +140,39 @@ h1{
 }
 
 
+@media (max-width:60em){
+    .Home-goal h2{
+        font-size: 1.5em;
+        height: 2em;
+    }
+    .Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    .Home-img-wrapper{
+        position: relative;
+        width: 100%;
+        margin: 2em 0;
+    }
+    .Home-goal{
+        height: fit-content;
+    }
+    .Home-goal p{
+        padding-bottom: 1em;
+    }
+    
+}
+
+
+
 /* Rules -------------------------------------------------------------*/
 .Home-rules{
     background: #707070;
     color: white;
-    height: 175vh;
+    height: 200vh;
 }
 
 .Home-img-disney_world{
@@ -212,4 +251,152 @@ h1{
 .Home-rules p, .Home-rules h3, .Home-rules ol, .Home-rules ul{
     /* padding-bottom: 10px; */
     line-height: 1.5em;
+}
+@media (max-width: 60em){
+    .Home-rules h2{
+        font-size: 1.5em;
+        height: 2.5%;
+    }
+    .Home-rules-content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0 .5rem;
+    }
+    .Home-rules{
+        /* height: 220vh; */
+        height: fit-content;
+    }
+}
+
+@media (max-width: 50em) {
+    .Home-rules{
+        /* height: 235vh */
+    }
+}
+@media(max-width: 40em){
+    .Home-rules{
+        /* height: 280vh; */
+    }
+}
+
+/* Hands ---------------------------------------------------------------- */
+
+.Home-hands{
+    background: #0A0A0A;
+    z-index: -2;
+    height: fit-content;
+}
+.Home-hands span{
+    color: yellow;
+    font-weight: 700;
+}
+.Home-hands-container{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+.Home-hands-notes-container, .Home-hands-winningHands-container{
+    margin: 2rem 0 0 0;
+}
+.Home-hands-notes-container{
+    width: 50%;
+    /* background: #707070; */
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    
+}
+.Home-hands-winningHands-container{
+    width: 35%;
+    height: 100%;
+    
+}
+.Home-hands-winningHands-rank-wrapper{
+    padding: 1.5rem 0;
+    background: #707070;
+    z-index: 2;
+    position: relative;
+}
+.winning-hand ol{
+    padding: 0;
+
+}
+.winning-hand li{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0 1.5rem;
+margin-bottom: 1rem;
+}
+.Hand-img-container{
+    margin-top: 1rem;
+}
+.Hand-img-container img{
+    width: 3rem;
+    height: auto;
+    
+}
+.calc-btn-container{
+    position: sticky;
+    bottom: 2rem;
+    z-index: -2;
+}
+.Home-hands-notes-content a{
+    display: inline;
+    color: yellow;
+    font-weight: 700;
+}
+.calc-btn{
+
+
+    background: yellow;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 75%;
+    font-size:1.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+    position: sticky;
+    bottom: 0px;
+    z-index: 1;
+    
+    transition: ease-out .6s;
+    
+}
+.calc-btn:hover{
+    /* color: white;
+    background: black; */
+    cursor: pointer;
+    box-shadow: inset -500px 0px 0px 0px white;
+}
+li>div>p{
+    color: yellow;
+    font-style: italic;
+    margin-top: .5rem;
+}
+@media (max-width:70em){
+    .Home-hands-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    .Home-hands-notes-container{
+        position: relative;
+        width: 90%;
+    }
+    .Home-hands-winningHands-container{
+        width: 90%;
+    }
 }
