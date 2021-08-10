@@ -295,7 +295,6 @@ h1{
 .Home-hands{
     background: #0A0A0A;
     height: 200vh;
-    scroll-snap-align: none;
 }
 .Home-hands span{
     color: yellow;
