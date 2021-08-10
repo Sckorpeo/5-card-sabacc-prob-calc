@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 class Home extends Component {
     componentDidMount() {
-        if (this.props.switch()) {
+        if (this.props.state) {
             this.props.switch()
         }
 
