@@ -10,62 +10,132 @@ h2{
 h1{
     font-size: 3em;
 }
-.Home-goal h1{
-    padding: 5% 0 0 5%;
-}
-
-.Home-intro{
-    background:yellow;
-    color: black;
-}
-.Home-intro-header{
-    padding: 0 5%;
-    padding-top: 220px;
-    width: 50%;
-    height: 50%;
-    margin-left: 20%;
-}
-.Home-intro-content{
-    height: 50%;
-    padding: 0 5%;
-    width: 50%;
-    font-weight: 500;
-    margin-left: 20%;
-}
-.Home-goal{
-    background: #0A0A0A;
-}
-.Home-goal span{
-    color: yellow;
-    font-weight: 700;
-}
-.Home-rules{
-    background: #707070;
-    color: white;
-}
+/* Body */
 .Home-container{
     scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
 }
-.Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
-    width:35%;
-    height: 100%;
-    padding: 0 0 7% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 .Home-img-wrapper{
-    height: 40%;
-    width: 100%;
+    grid-column: 1/6;
+    /* align-self: right; */
+    position: sticky;
+    top: 2em;
+    height: 280px;
+    width: 90%;
+    /* align-items: flex-end; */
 }
 .Home-img-container{
-    height: 90%;
+    height: 250px;
     width: 100%;
     overflow: hidden;
 }
+.Home-img-subtext{
+    color:#ACACAC;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+}
+
+
+/* Intro --------------------------------------------------------------*/
+.Home-intro{
+    background:yellow;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Home-intro-header{
+    width: 30%;
+    height: 100%;
+    padding-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    
+}
+.Home-intro-header h1, .Home-intro-header h3, .Home-intro-header p{
+    padding-bottom: 20px;
+}
+.Home-intro-header p{
+    line-height: 1.5em;
+}
+
+/* Goal ---------------------------------------------------------*/
+.Home-goal{
+    background: #0A0A0A;
+}
+.Home-goal{
+    height: 100vh;
+}
+.Home-goal h2{
+    height: 20%;
+    margin: 0;
+    font-size:3em;
+    text-align: center;
+    padding: .5em 0 0 0;
+}
+.Home-goal span{
+    color: yellow;
+    font-weight: 700;
+}
+.Home-goal-content-wrapper{
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+}
+.Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
+    /* width:100%;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-gap: 0 2em;
+    /* grid-auto-rows: minmax(150px, 300px);
+    padding: 0 5em 2em 5em; */
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(12,1fr);
+    grid-row-gap: 0;
+    grid-column-gap: 36px;
+    max-width: 75rem;
+    margin: 2em auto;
+    display: grid;
+}
+.Home-goal-section-one p, .Home-goal-section-two p, .Home-goal-section-three p{
+    
+    /* width: 70%; */
+}
+.img-sabacc-deck{
+    align-self: auto;
+}
+.Home-goal-section-one-content{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    flex-direction: column;
+    grid-column: 6/-1;
+}
+.content-one{
+    padding-bottom: 5%;
+}
+.goal-section-two{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-column: 6/-1;
+}
+
+
+/* Rules -------------------------------------------------------------*/
+.Home-rules{
+    background: #707070;
+    color: white;
+    height: 175vh;
+}
+
 .Home-img-disney_world{
     margin-top: -35%;
     width: 100%;
@@ -73,35 +143,28 @@ h1{
 }
 .Home-img-sabacc_deck{
     width: 100%;
-    margin-top: -7%;
 }
-.Home-goal-content-wrapper{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 90%;
-    width: 100%;
-}
-.Home-img-subtext{
-color:#ACACAC;
-font-weight: 300;
-text-align: center;
-font-style: italic;
-}
-
-
 .Home-rules-content-wrapper span{
-    color: black;
+    color: yellow;
+    font-weight: 700;
 }
 .Home-rules-h1-span{
     color: yellow;
 }
 .Home-rules-content-wrapper{
-    display: flex;
-    height: 95%;
-    width: 100%;
+    /* display: flex;
+    height: 80%;
+    width: 80%;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    margin: 0 auto; */
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(12,1fr);
+    grid-row-gap: 0;
+    grid-column-gap: 36px;
+    max-width: 75rem;
+    margin: 2em auto;
+    display: grid;
 }
 .Home-rules-section-one, .Home-rules-section-two, .Home-rules-section-three{
     width: 30%;
@@ -109,24 +172,24 @@ font-style: italic;
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 5% 0 2.5% 0;
+    padding: 0% 0 2.5% 0;
     
 }
 .Home-rules-section-one{
-justify-content: top;
+    justify-content: top;
 }
 .Home-rules-section-three{
-    justify-content: flex-end;
+    justify-content: top;
 }
 .Home-rule-next span{
     color: yellow;
 }
 .Home-img-sabacc_cards{
     width: 100%;
-    margin-top: -4%;
+
 }
 .Home-rules ul, ol{
-    padding: 5% 0 2.5% 10%;
+    padding: 2.5% 0 2.5% 10%;
 }
 .Home-rules h1{
     height: 5%;
@@ -134,8 +197,19 @@ justify-content: top;
     padding: 2% 0 0 0;
 }
 .Home-rules h2{
-    margin-bottom: 2.5%;
+    height: 10%;
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+    padding: .5em 0 0 0;
 }
 .rules-img{
     padding: 3% 0 0% 0;
+}
+.objective-content, .mechanics-content, .gameplay-content{
+    grid-column: 6/-1;
+}
+.Home-rules p, .Home-rules h3, .Home-rules ol, .Home-rules ul{
+    /* padding-bottom: 10px; */
+    line-height: 1.5em;
 }
