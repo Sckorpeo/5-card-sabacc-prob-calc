@@ -419,7 +419,7 @@ li>div>p{
         position: static;
     }
 }
-@media (max-width:40em){
+@media (max-width:65em){
     .Home-container{
         scroll-snap-type: none;
     }
