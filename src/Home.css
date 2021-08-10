@@ -404,7 +404,7 @@ li>div>p{
         width: 100%;
     }
     .Home-hands-notes-container{
-        position: relative;
+        position: static;
         width: 90%;
     }
     .Home-hands-winningHands-container{
