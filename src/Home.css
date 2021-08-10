@@ -396,7 +396,7 @@ li>div>p{
 }
 @media (max-width:80em){
     .Home-hands{
-        height: fit-content;
+        height: 300vh;
     }
 }
 @media (max-width:70em){
