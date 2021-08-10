@@ -295,7 +295,7 @@ h1{
 .Home-hands{
     background: #0A0A0A;
     z-index: -2;
-    height: fit-content;
+    height: 200vh;
 }
 .Home-hands span{
     color: yellow;
@@ -310,7 +310,7 @@ h1{
     margin: 0 auto;
 }
 .Home-hands-notes-container, .Home-hands-winningHands-container{
-    margin: 2rem 0 0 0;
+    padding: 2rem 0 0 0;
 }
 .Home-hands-notes-container{
     width: 50%;
@@ -395,7 +395,13 @@ li>div>p{
     font-style: italic;
     margin-top: .5rem;
 }
+@media (max-width:80em){
+    .Home-hands{
+        height: fit-content;
+    }
+}
 @media (max-width:70em){
+    
     .Home-hands-container{
         flex-direction: column;
         justify-content: center;
