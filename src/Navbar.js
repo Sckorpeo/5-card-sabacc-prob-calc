@@ -24,6 +24,10 @@ class Navbar extends Component {
                         className='fas fa-circle fa-2x rules'
                     // activeClassName='fas fa-dot-circle' 
                     />
+                    <Link to='/#winningHands'
+                        className='fas fa-circle fa-2x goal'
+                    // activeClassName='fas fa-dot-circle' 
+                    />
 
                 </nav>
             </div>

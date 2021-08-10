@@ -190,6 +190,18 @@ let winningHands = [{
 { hand: 'Straight Khyron', description: 'Sabacc with one sylop and a run of numbers', exampleHand: [0, 2, -3, -4, 5] },
 { hand: 'Sabacc', description: 'Sum of hand equals zero.', exampleHand: [5, 7, -9, -1, -2] }]
 
+let pagination = (array, page, rows) => {
+
+    let trimStart = (page - 1) * rows,
+        trimEnd = trimStart + rows;
+
+    let trimmedArray = array.splice(trimStart, trimEnd);
+
+    let pages = Math.ceil(array.length / rows);
+
+    return trimmedArray;
+}
+
 export {
     createDeck,
     randomNumber,
@@ -199,5 +211,6 @@ export {
     handCheck,
     getCardImg,
     getColor,
-    winningHands
+    winningHands,
+    pagination
 };

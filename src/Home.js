@@ -261,6 +261,27 @@ class Home extends Component {
                                     the order of winning hands you see on this page. If you would like to test out the calculator, there
                                     is a button <span>below</span>.
                                 </p>
+                                <h3>Winning Hand Ties</h3>
+                                <p>If two people have hands that tie follow the chart below starting at 1.</p>
+                                <ol>
+                                    <li>
+                                        Nulrhek Tie
+                                        <ol>
+                                            <li>Hand with <span>sylop </span> wins.</li>
+                                            <li>Positive number beats negative number. (Ex. 6 beats -6)</li>
+                                            <li>Highest total positive sum of numbers. (Ex. positive total of hand [1,4,-2,-5,6] would be 1 + 4 + 6 = 11)</li>
+                                            <li>Highest single positive number. (Ex. hand of [1,4,-2,-5,6] highest single positive number is 6)</li>
+                                            <li>If there is still a tie, then the pot is split</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        Sabacc Tie
+                                        <ol>
+                                            <li>Suited hands beat non suited hands.</li>
+                                            <li>Higher integer pairs, three of a kind, and four of a kind beat lower integer.</li>
+                                        </ol>
+                                    </li>
+                                </ol>
 
                             </div>
                         </div>
@@ -451,9 +472,9 @@ class Home extends Component {
                                 </ol>
 
                             </div>
-                            {/* <a className='calc-btn-container'> */}
-                            <div className='calc-btn'>Probability Calculator</div>
-                            {/* </a> */}
+                            <Link to='/Probability-calculator'>
+                                <div className='calc-btn'>Probability Calculator</div>
+                            </Link>
                         </div>
 
                     </div>
