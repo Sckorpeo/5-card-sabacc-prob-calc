@@ -408,7 +408,8 @@ margin-bottom: 1rem;
     /* color: white;
     background: black; */
     cursor: pointer;
-    box-shadow: inset -500px 0px 0px 0px white;
+    color: black;
+    background:white;
 }
 .Home-hands-notes-content h3{
     padding:1rem 0 1rem 0;
