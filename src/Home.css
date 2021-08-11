@@ -181,6 +181,11 @@ h1{
         height: fit-content;
     }
 }
+@media screen and (max-height:715px){
+    .Home-goal{
+        height: fit-content;
+    }
+}
 
 
 
@@ -296,6 +301,15 @@ h1{
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     
+}
+
+@media screen and (max-height:715px){
+    .Home-rules{
+        height: fit-content;
+    }
+    .Home-rules-content-wrapper{
+        margin: 2rem 0 0 0;
+    }
 }
 
 
@@ -460,6 +474,11 @@ li>div>p{
     .calc-btn{
         position: static;
     }
+    .Home-hands{
+        height: fit-content;
+    }
+}
+@media screen and (max-height:715px){
     .Home-hands{
         height: fit-content;
     }
