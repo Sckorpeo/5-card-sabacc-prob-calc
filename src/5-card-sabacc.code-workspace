@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../../05 Learning/react-bootcamp-materials/16-building-yahztee"
+		},
+		{
+			"path": "../../15-joke-app"
+		},
+		{
+			"path": "../../16-vending-machine"
+		},
+		{
+			"path": "../../17-pet-website"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

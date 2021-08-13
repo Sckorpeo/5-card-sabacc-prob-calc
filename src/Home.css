@@ -2,6 +2,7 @@ section {
     height: 100vh;
     scroll-snap-align: start;
     color: white;
+    
 }
 h2{
     font-size: 1.5em;
@@ -66,6 +67,15 @@ h1{
     line-height: 1.5em;
 }
 
+@media (max-width:60em){
+h1{
+    font-size: 1.5em;
+}
+.Home-intro-header{
+    width: 90%;
+}
+}
+
 /* Goal ---------------------------------------------------------*/
 .Home-goal{
     background: #0A0A0A;
@@ -74,7 +84,7 @@ h1{
     height: 100vh;
 }
 .Home-goal h2{
-    height: 20%;
+    height: 10%;
     margin: 0;
     font-size:3em;
     text-align: center;
@@ -88,6 +98,7 @@ h1{
     height: 80%;
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 1em;
 }
 .Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
     /* width:100%;
@@ -127,13 +138,62 @@ h1{
     flex-direction: column;
     grid-column: 6/-1;
 }
+/* Iphone X*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .Home-goal h2{
+        font-size: 1.5em;
+        height: 2em;
+    }
+    .Home-goal-section-one, .Home-goal-section-two, .Home-goal-section-three{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    .Home-img-wrapper{
+        position: relative;
+        width: 100%;
+        margin: 2em 0;
+    }
+    .Home-goal{
+        height: fit-content;
+    }
+    .Home-goal p{
+        padding-bottom: 1em;
+    }
+}
+/* Ipad*/
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .Home-img-wrapper{
+        position: relative;
+        width: 100%;
+        margin: 2em 0;
+    }
+    .Home-goal{
+        height: fit-content;
+    }
+}
+@media screen and (max-height:715px){
+    .Home-goal{
+        height: fit-content;
+    }
+}
+
 
 
 /* Rules -------------------------------------------------------------*/
 .Home-rules{
     background: #707070;
     color: white;
-    height: 175vh;
+    height: 200vh;
 }
 
 .Home-img-disney_world{
@@ -212,4 +272,216 @@ h1{
 .Home-rules p, .Home-rules h3, .Home-rules ol, .Home-rules ul{
     /* padding-bottom: 10px; */
     line-height: 1.5em;
+}
+
+/* Iphone X*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .Home-rules{
+        height: fit-content;
+    }
+    .Home-rules h2{
+        font-size: 1.5em;
+        height: 2.5%;
+    }
+    .Home-rules-content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0 .5rem;
+    }
+  }
+  /* Ipad*/
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}
+
+@media screen and (max-height:715px){
+    .Home-rules{
+        height: fit-content;
+    }
+    .Home-rules-content-wrapper{
+        margin: 2rem 0 0 0;
+    }
+}
+
+
+
+/* Hands ---------------------------------------------------------------- */
+
+.Home-hands{
+    background: #0A0A0A;
+    height: fit-content;
+    scroll-snap-type: none;
+}
+.Home-hands span{
+    color: yellow;
+    font-weight: 700;
+}
+.Home-hands-container{
+    
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+.Home-hands-notes-container, .Home-hands-winningHands-container{
+    padding: 2rem 0 0 0;
+}
+.Home-hands-notes-container{
+    width: 50%;
+    /* background: #707070; */
+    padding: 1.5rem;
+    line-height: 1.5rem;
+    position: sticky;
+    top: 2rem;
+    
+}
+.Home-hands-winningHands-container{
+    width: 35%;
+    height: 100%;
+    
+}
+.Home-hands-winningHands-rank-wrapper{
+    padding: 1.5rem 0;
+    background: #707070;
+    z-index: 2;
+    position: relative;
+}
+.winning-hand ol{
+    padding: 0;
+
+}
+.winning-hand li{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0 1.5rem;
+margin-bottom: 1rem;
+}
+.Hand-img-container{
+    margin-top: 1rem;
+}
+.Hand-img-container img{
+    width: 3rem;
+    height: auto;
+    
+}
+.calc-btn-container{
+    position: sticky;
+    bottom: 2rem;
+    z-index: -2;
+}
+.Home-hands-notes-content a{
+    display: inline;
+    color: yellow;
+    font-weight: 700;
+}
+.calc-btn{
+
+
+    background: yellow;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 15rem;
+    font-size:1.5rem;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+    position: sticky;
+    bottom: 0px;
+    z-index: 1;
+    
+    transition: ease-out .6s;
+    
+}
+.calc-btn:hover{
+    /* color: white;
+    background: black; */
+    cursor: pointer;
+    color: black;
+    background:white;
+}
+.Home-hands-notes-content h3{
+    padding:1rem 0 1rem 0;
+}
+li>div>p{
+    color: yellow;
+    font-style: italic;
+    margin-top: .5rem;
+}
+
+
+/* Iphone X */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .Home-container{
+        scroll-snap-type: none;
+    }
+    .Home-hands-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    .Home-hands-notes-container{
+        position: static;
+        width: 90%;
+    }
+    .Home-hands-winningHands-container{
+        width: 90%;
+    }
+    .calc-btn{
+        position: static;
+    }
+    .Home-hands{
+        height: fit-content;
+    }
+  }
+  /* Ipad */
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .Home-container{
+        scroll-snap-type: none;
+    }
+    .Home-hands-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    .Home-hands-notes-container{
+        position: static;
+        width: 60%;
+    }
+    .Home-hands-winningHands-container{
+        width: 60%;
+    }
+    .calc-btn{
+        position: static;
+    }
+    .Home-hands{
+        height: fit-content;
+    }
+}
+@media screen and (max-height:715px){
+    .Home-hands{
+        height: fit-content;
+    }
 }

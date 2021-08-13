@@ -2,12 +2,13 @@
 import './ProbCalc.css';
 import InputForm from './InputForm'
 import React, { Component } from 'react';
-import { total, shuffle, handCheck } from './helpers';
+import { total, shuffle, handCheck, pagination } from './helpers';
 import ProbList from './ProbList';
 import Prob from './Prob';
 import WinningHands from './WinningHands';
 import '@fortawesome/fontawesome-free/css/all.css';
 import backgroundImg from './sabacc_full_background.jpeg';
+import { v4 as uuidv4 } from 'uuid';
 
 class ProbCalc extends Component {
   static defaultProps = {
@@ -50,7 +51,8 @@ class ProbCalc extends Component {
   }
 
   renderProbs(hand) {
-    return this.state.probabilities.map(p => hand === p.handType ?
+
+    return pagination(this.state.probabilities.map(p => hand === p.handType ?
       <Prob total={p.total}
         cards={p.cards}
         key={p.key}
@@ -62,7 +64,7 @@ class ProbCalc extends Component {
       /> :
       null
 
-    ).filter(x => x !== null);
+    ).filter(x => x !== null), 1, 100);
   }
 
   calculateProbs(handArray) {
@@ -125,7 +127,7 @@ class ProbCalc extends Component {
     // for (let i = 0; i < tries; i++) {
     while (attempts.length < tries) {
 
-      let attempt = { total: 0, cards: [], frequency: 1, id: '', handType: '' };
+      let attempt = { total: 0, cards: [], frequency: 1, key: '', handType: '' };
       if (shuffledDeck.length === 2) { shuffledDeck = shuffle(deck) }
       for (let k = 0; k < draws; k++) {
         attempt.cards.push(shuffledDeck.pop())
@@ -133,8 +135,7 @@ class ProbCalc extends Component {
       attempt.total = total(attempt.cards);
 
       if (attempt.total === 0) {
-        attempt.id = attempt.cards.toString();
-        attempt.key = attempt.cards.toString();
+        attempt.key = uuidv4();
         attempts.push(attempt);
         attempt.handType = handCheck(attempt.cards);
         // if (attempts.some(element => compareArrays(element.cards, attempt.cards))) {
